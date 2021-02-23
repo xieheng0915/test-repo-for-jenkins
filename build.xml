@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ユニットテスト -->
+<project name="test-repo-by-phing" default="build">
+  <property name="outputDir" value="report" override="false"/>
+
+  <!-- 初期設定 -->
+  <target name="prepare">
+    <echo msg="初期設定" />
+  </target>
+
+
+  <!-- ユニットテスト -->
+  <target name="test">
+    <exec executable= "vendor/bin/phpunit">
+      <arg line= "--colors=auto --coverage-clover ${outputDir}/coverage.xml --log-junit ${outputDir}/phpunit.xml" />
+    </exec>
+  </target>
+
+  <target name="build" depends="prepare, test" />
+
+</project>

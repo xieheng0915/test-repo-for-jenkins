@@ -1,0 +1,12 @@
+{
+    "require": {
+        "php": ">=7.4",
+        "phing/phing": "2.*",
+        "phpunit/phpunit": "^5.7|^6.0"
+    },
+    "autoload": {
+        "classmap": [
+            "app/libraries"
+        ]
+    }
+}
