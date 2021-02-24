@@ -2,20 +2,10 @@
 <!-- ユニットテスト -->
 <project name="first-php-project" default="build">
   <property name="outputDir" value="report" override="false"/>
-  <property name="sonar.host" value="https://m0017d-dev-vm-sonar-west.deaas.ddsdev.org" override="false"/>
-  <property name="sonar.projectkey" value="first-php-project" override="false"/>
-  <property name="sonar.login" value="55f6f003dce9a8c2ee98748efdd17cbd92385e9d" override="false"/>
 
   <!-- 初期設定 -->
   <target name="prepare">
     <echo msg="初期設定" />
-  </target>
-
-  <!-- ソナー静的解析 -->
-  <target name="check">
-    <exec executable= "sonar-scanner">
-      <arg line= "-Dsonar.projectKey=${sonar.projectkey} -Dsonar.sources=./src -Dsonar.tests=./tests -Dsonar.host.url=${sonar.host} -Dsonar.login=${sonar.login}" />
-    </exec>
   </target>
 
   <!-- ユニットテスト -->
