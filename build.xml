@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ユニットテスト -->
-<project name="test-repo-by-phing" default="build">
+<project name="first-php-project" default="build">
   <property name="outputDir" value="report" override="false"/>
+  <property name="sonar.host" value="http://sonarqubecon.autohealingase.p.azurewebsites.net" override="false"/>
+  <property name="sonar.projectkey" value="first-php-project" override="false"/>
+  <property name="sonar.login" value="95c3c5c80fa5003068902da84bfd0237c5feb7fc" override="false"/>
 
   <!-- 初期設定 -->
   <target name="prepare">
     <echo msg="初期設定" />
   </target>
 
+  <!-- ソナー静的解析 -->
+  <target name="check">
+    <exec executable= "sonar-scanner">
+      <arg line= "-Dsonar.projectKey=${sonar.projectkey} -Dsonar.sources=./src -Dsonar.tests=./tests -Dsonar.host.url=${sonar.host} -Dsonar.login=${sonar.login}" />
+    </exec>
+  </target>
 
   <!-- ユニットテスト -->
   <target name="test">
