@@ -18,10 +18,14 @@ pipeline {
                 git url: SCMURL
             }
         }
-        // 静的解析の実行
-        // phingのbuild.xmlに書き込み？composerで実行？
-        // composer で実行方法は？
-        // phingでの実行結果sonarqubeに表示？
+        // ユニットテスト実行
+        stage('test-phing') {
+            steps {
+                // composerのユニットテストイベントを呼び出す
+                sh 'phing'
+            }
+        }
+        // 静的な解析
         stage('sonar scanner') {
             steps {
                 // composerの静的解析イベントを呼び出す
@@ -29,15 +33,6 @@ pipeline {
                     -Dsonar.login=088db75e7448875d6072564eb8839933b071caf3'
             }
         }
-
-        // ユニットテスト実行
-        /*
-        stage('test-phing') {
-            steps {
-                // composerのユニットテストイベントを呼び出す
-                sh 'phing'
-            }
-        }*/
         
     }
     post {

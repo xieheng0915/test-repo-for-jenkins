@@ -11,7 +11,7 @@
   <!-- ユニットテスト -->
   <target name="test">
     <exec executable= "vendor/bin/phpunit">
-      <arg line= "--colors=auto --coverage-clover ${outputDir}/coverage.xml --coverage-html ${outputDir}/coverage.html --log-junit ${outputDir}/phpunit-log.xml" />
+      <arg line= "--colors=auto --coverage-clover coverage.xml --coverage-html ${outputDir}/coverage.html --log-junit ${outputDir}/phpunit-log.xml　-c phpunit-result.xml" />
     </exec>
   </target>
 
