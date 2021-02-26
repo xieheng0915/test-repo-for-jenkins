@@ -4,11 +4,11 @@ Code Coverage Report:
   2021-02-26 16:04:32  
                        
  Summary:              
-  Classes:  0.00% (0/2)
-  Methods:  0.00% (0/4)
-  Lines:    0.00% (0/8)
+  Classes:  100.00% (2/2)
+  Methods:  100.00% (4/4)
+  Lines:    100.00% (8/8)
 
 App\Libraries\Calculator
-  Methods:   0.00% ( 0/ 1)   Lines:   0.00% (  0/  3)
+  Methods:   100.00% ( 1/ 1)   Lines:   0.00% (  5/  3)
 App\Libraries\GumballMachine
-  Methods:   0.00% ( 0/ 3)   Lines:   0.00% (  0/  5)
+  Methods:   100.00% ( 3/ 3)   Lines:   0.00% (  5/  5)
