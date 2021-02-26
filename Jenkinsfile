@@ -31,12 +31,13 @@ pipeline {
         }
 
         // ユニットテスト実行
+        /*
         stage('test-phing') {
             steps {
                 // composerのユニットテストイベントを呼び出す
                 sh 'phing'
             }
-        }
+        }*/
         
     }
     post {
