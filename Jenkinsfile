@@ -19,12 +19,14 @@ pipeline {
             }
         }
         // ユニットテスト実行
+        /*
         stage('test-phing') {
             steps {
                 // composerのユニットテストイベントを呼び出す
                 sh 'phing'
             }
         }
+        */
         // 静的な解析
         stage('sonar scanner') {
             steps {
