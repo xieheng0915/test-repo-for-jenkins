@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1614355498">
-  <project timestamp="1614355498">
+<coverage generated="1614360683">
+  <project timestamp="1614360683">
     <file name="/Users/xieheng/gitspace/azurespace/test-repo-for-jenkins/app/libraries/Calculator.php">
       <class name="App\Libraries\Calculator" namespace="global">
         <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
