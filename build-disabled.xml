@@ -11,7 +11,14 @@
   <!-- ユニットテスト -->
   <target name="test">
     <exec executable= "vendor/bin/phpunit">
-      <arg line= "--colors=auto --coverage-clover ${outputDir}/coverage.xml --log-junit ${outputDir}/phpunit.xml" />
+      <arg line= "--colors=auto --coverage-clover ${outputDir}/coverage.xml --coverage-html ${outputDir}/coverage.html --log-junit ${outputDir}/phpunit-log.xml" />
+    </exec>
+  </target>
+
+    <!-- ユニットテスト -->
+  <target name="testapp">
+    <exec executable= "vendor/bin/phpunit">
+      <arg line= "--color --coverage-clover coverage.xml --coverage-html coverage.html -c phpunit-result.xml" />
     </exec>
   </target>
 

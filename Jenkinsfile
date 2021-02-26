@@ -26,7 +26,7 @@ pipeline {
             steps {
                 // composerの静的解析イベントを呼び出す
                 sh '/opt/sonar-scanner/bin/sonar-scanner \
-                    -Dsonar.login=ee858ccab609a4dac97697e0636fe344d86d356d'
+                    -Dsonar.login=088db75e7448875d6072564eb8839933b071caf3'
             }
         }
 
